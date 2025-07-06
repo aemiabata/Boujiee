@@ -1,0 +1,909 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* background: rgb(15, 15, 15); */
+    background: linear-gradient(112.1deg, rgb(15, 7, 53) 11.4%, rgb(70, 28, 105) 70.2%);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 0.18em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s; /* Safari */
+}
+
+body h1{
+    position: relative;
+    font-family:'Roboto', sans-serif;
+    font-size: 5vh;   
+}
+
+/* body.home{
+    background: linear-gradient(112.1deg, rgb(15, 7, 53) 11.4%, rgb(70, 28, 105) 70.2%);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+@media all and (max-width: 960px){
+    body.home{
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+} */
+/* body.contact{
+    background-image: url(images/TD\ Ekko\ Desktop\ Wallpaper.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+body.about{
+    background-image: url(images/Spirit\ Blossom\ Yasuo\ Desktop\ Wallpaper\ WM.jpg.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+} */
+  
+.bg-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    content: ' ';
+    backface-visibility: hidden;
+    z-index: 0;
+    background: #000000;
+    opacity: 0.4;
+}
+
+#video {
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    top:0;
+    left:0;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.container-fluid{
+    margin: 0 auto;
+    padding: 0%;
+    height: 100px;
+}
+
+.container{
+    margin: auto;
+    overflow: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100px;
+    padding: 0% 5%;
+    min-height: 8%;
+    backdrop-filter: blur(5px);
+}
+
+
+.logo{
+    margin: 0 auto;
+    width: auto;
+    height: 100px;
+    transition-duration: 0.3s; 
+}
+
+.logo:hover{
+    transform: scale(1.10);
+}
+
+.navbar-brand {
+    display: block;
+}
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.171);
+    border: none;
+    padding: 20px 15px;
+    outline: none;
+}
+
+.navbar-toggler span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    border: none;
+    background: white;
+}
+
+.navbar-toggler span + span {
+    margin-top: 4px;
+    width: 20px;
+}
+
+.navbar-toggler span + span + span{
+    margin-top: 4px;
+    width: 20px;
+}
+
+@media all and (max-width: 960px){
+    .collapse {
+        background: rgba(0, 0, 0, 0.74);
+        border-radius: 15px;
+        transition: 0.3s;
+    }  
+}
+
+.navbar-collapse{
+    text-align: center;
+}
+
+.navbar-nav button{
+    padding: 1.2rem 0;  
+}
+
+.navbar-nav .btn{
+    background-color: rgba(255, 255, 255, 0.219);
+    color: white;
+    border-radius: 0;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 1px;
+    transition: 0.3;
+}
+
+.navbar-nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;  
+}
+
+.nav-item{ 
+    display: inline-block;
+    position: relative;
+    margin: 0 1rem 0 1rem;
+}
+
+.nav-link, .nav-link:visited{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    transition-duration: 0.3s;
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+}
+
+.nav-link:hover{
+    color: rgb(126, 57, 255);
+}
+
+::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav-link::before{
+    content:"";
+    display: block;
+    height: 4px;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0%;
+    left:0%;
+    transition-duration: 0.3s
+}
+
+.nav-link:hover::before{
+    width:100%;
+}
+
+/* Dropdown menu */
+.nav-item:hover .dropdown-menu{ 
+    display: block;
+}
+.dropdown-menu{
+    background-color: rgb(14, 14, 14);
+}
+
+.dropdown-item,.dropdown-item:visited{
+    color: white;
+}
+.dropdown-item:hover{ 
+    background-color: rgb(14, 14, 14);
+    color: aliceblue;
+}
+.dropdown-item:active{ 
+    background-color: rgb(255, 255, 255);
+    color: rgb(19, 19, 19);
+}
+
+.dropdown-menu a:hover{
+    color:  rgb(126, 57, 255);
+}
+
+/* Social Media Icons */
+.social-media{
+    position: fixed;
+    margin: 0 auto;
+    right: 20px;
+    bottom: 20px;
+    background-color: #00000054;
+    width: 70px;
+    height: 210px;
+    padding: 5px 10px;
+    border-radius: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.social-media img{
+    display: inline-block;
+    margin: 12px 5px 12px 5px;
+    width: 30px;
+    height: auto;
+    transition: 0.3s;
+}
+
+.social-media img:hover{
+    transform: scale(1.15);
+}
+
+.social-media a{
+    color: transparent;
+}
+
+/* Reveal on scrollw */
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+  
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.btn, .btn:visited {
+    display: inline-block;
+    /* float: left; */
+    /* vertical-align: middle; */
+    margin: 2% 1%;
+    /* padding: 0px 20px; */
+    width: 100px;
+    /* font-size:15px; */
+    /* margin: 20px 5px; */
+    /* height: 50px; */
+    background: rgba(2, 2, 2, 0.425);
+    color: white;
+    border: none;
+    transition: 0.3s;
+    box-shadow: .8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.btn:hover{
+    background:rgb(255, 255, 255);
+    color: black;
+    transform: scale(1.10);
+}
+
+.btn:active{
+    background: rgba(2, 2, 2, 0.425);
+    color: white;
+}
+
+/* .parallax{
+    margin: 0%;
+    perspective: 1px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    transform-style: preserve-3d;
+}
+
+.parallax_layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
+
+.intro{
+    position: absolute;
+    text-align: center;
+    margin-bottom: 50vh;
+    background-image: url(images/purple\ shapes.jpg);
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro img{
+    position: relative;
+    min-width: 40vw;
+    height: auto;
+    top: 15vh;
+    padding-bottom: 5vh;
+}
+
+.intro p {
+    font-size: 2em;
+    padding-bottom: 10vh;
+}
+
+.intro-button, .intro-button:visited{
+    font-size: 1em;
+    color: white;
+    background-color: rgba(15, 15, 15, 0.5);
+    border: transparent;
+    min-width: 8vw;
+    min-height: 5vh;
+    padding: 1vw;
+    border-radius: 30px;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.intro-button:hover{
+    scale: 1.02;
+    background-color: white;
+    color: black;
+}
+
+.intro-button:active{
+    scale: 0.9;
+}
+
+
+.content{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    top: 100vh;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* padding-top: 3em; */
+}
+
+.content hr{
+    height: 0.5vh;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.heading1{
+    background-image:url(images/Smoke.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 14vh;
+    text-align: center;
+    /* margin-bottom: 2em; */
+}
+
+.heading1 p{
+    font-size: 2em;
+}
+
+.heading1 h1{
+    font-family:'Roboto', sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;    
+}
+
+.heading1 img{
+    margin: 0 0.2vw 2vh 0.2vw;
+    /* flex: 25%; */
+    width: 20em;
+    background-color: transparent;
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.heading1 img:hover{
+    transform: scale(1.02);
+}
+
+.heading2{
+    /* position: relative; */
+    /* margin-top: 5vh; */
+    padding: 14vh;
+    /* margin-bottom: 5vh; */
+    /* width: 90vw; */
+    height: 100vh;
+    text-align: center;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* margin: 0 auto; */
+    background-image: url(images/The\ Grand\ Finale.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: block; */
+}
+
+.heading2 p{
+    position: relative;
+    margin: 0 auto;
+    top: 40%;
+    right: 28vw;
+    /* margin: 0 0.2vw 0 0.2vw; */
+    font-size: 4em;
+    text-align: left;
+    width: 40%;  
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(119, 0, 255),
+      0 0 82px rgb(140, 0, 255),
+      0 0 92px rgb(174, 0, 255),
+      0 0 102px rgb(225, 0, 255),
+      0 0 151px rgb(234, 0, 255);
+    /* animation: flicker 1.2s infinite alternate; */
+}
+
+.heading3{
+    height: 100vh;
+    text-align: center;
+    background-image: url(images/Sage\ Desktop\ Wallpaper.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading3 h1{
+    position: relative;
+    margin: 0 auto;
+    top: 40%;
+    right: 30vw;
+    /* margin: 0 0.2vw 0 0.2vw; */
+    font-size: 4em;
+    text-align: left;
+    width: 30%; 
+    text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa; 
+    /* animation: flicker2 1.6s infinite alternate; */
+}
+
+.heading4{
+    padding: 1vh;
+    height: 100vh;
+    text-align: center;
+    background-image: url(images/pink\ shape.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading4 p{
+    position: relative;
+    margin: 0 auto;
+    top: 15%;
+    margin-bottom: 10%;
+    font-size: 6em;
+}
+.carousel{
+    margin: 0 auto;
+    width: 50%;
+    /* margin-left: 5vw; */
+    /* margin-bottom: 5vh; */
+    transition: 0.3s ease;
+}
+
+.carousel:hover{
+    transform: scale(1.02);
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover{
+    scale: 1.5;
+    background-color: #0000007c;
+    padding: 3vh 1vw;
+}
+
+.carousel img{
+    border-radius: 15px;
+}
+
+.heading5{
+    margin: 0 auto;
+    height: 100vh;
+    text-align: center;
+    background-image: url(images/stairs.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading5 h1{
+    text-transform: uppercase;
+    position: relative;
+    margin: 0 auto;
+    top: 13%;
+    margin-bottom: 8%;
+    font-size: 5em;
+}
+
+.banners{
+    display: block;
+    margin: 0 auto;
+    width: 80vw;
+}
+.banners img{
+    border-radius: 15px;
+    width: 40%;
+    height: auto;
+    margin: 1.1vh 0.4vw;
+}
+
+.bannerportfolio{
+    margin: 0 auto;
+    height: 100vh;
+    text-align: center;
+    background-image: url(images/Twitter\ Banner\ Portfolio\ Jan\ 2022.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bannerportfolio h1{
+    text-transform: uppercase;
+    position: relative;
+    margin: 0 auto;
+    top: 40%;
+    font-size: 5em;
+    background-color: #000000be;
+    backdrop-filter: blur(5px);
+    width: 100%;
+}
+
+.return{
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color: #000000;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.return button, .return button:visited{
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    margin-bottom: 10%;
+    font-size: 3em;
+    background-color: transparent;
+    color: white;
+    transition: 0.3s;
+}
+
+.return button:hover{
+    scale: 1.05;
+}
+
+.return button:active{
+    scale: 0.9;
+}
+.title{ 
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 13vh;
+    padding-bottom: 5vh;
+}
+
+.title h1::after {
+    display: inline-block;
+    content: "";
+    background-color: rgb(126, 57, 255);
+    width: 20vw;
+    height: 0.5vh;
+    margin: 0 1vw;
+    transform: translateY(-1vh);
+}
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    width: 65vw;
+    margin-top: 10vh;
+    padding-bottom: 5vh;
+}
+
+.card {
+    margin: 0 0.15vw 0 0.15vw;
+    flex: 25%;
+    max-width: 24.5%;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card img{
+    border-radius: 15px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+/* @media screen and (max-width: 800px) {
+    .card {
+      flex: 50%;
+      max-width: 50%;
+    }
+} */
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 600px) {
+.card {
+    flex: 100%;
+    max-width: 100%;
+} */
+.card:hover{
+    transform: scale(1.02); 
+    margin: 0 0.2vw 0 0.2vw;
+}
+
+
+.card-wide{
+    position: relative;
+    margin: 1vh 0.15vw 0 0.15vw;
+    flex: 100%;
+    border-radius: 15px;
+    max-width: 100%;
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+    transition: 0.3s; 
+}
+
+.card-wide:hover{
+    transform: scale(1.02); 
+}
+
+.card-wide img{
+    border-radius: 15px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* @media screen and (max-width: 800px) {
+    .card-wide {
+      flex: 100%;
+      max-width: 50%;
+    }
+} */
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  /* @media screen and (max-width: 600px) {
+    .card-wide {
+      flex: 100%;
+      max-width: 100%;
+    } */
+
+
+.text-wrapper{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    margin-top: 0 auto;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(180deg,#00000000 0%,#000000 100%);
+    border-radius: 15px;
+}
+
+.text-wrapperw{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    margin-top: 0 auto;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(180deg,#00000000 0%,#000000 100%);
+    border-radius: 15px;
+}
+
+
+.category-title{
+    text-align: center;
+    font-size: 1.4vw;
+}
+
+/* Featured */
+.featured{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 2vh;
+}
+
+.featured h2::after{
+    display: inline-block;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    width: 1000px;
+    height: 0.5vh;
+    margin: 0 1vw;
+    transform: translateY(-1vh);
+}
+
+.showcase{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.showcase2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wallpapers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wallpapers2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.theme h3{
+    margin: 0 auto;
+    position: relative;
+    margin-top: 100px;
+}
+
+.column{
+    flex: 25%;
+    max-width: 25vw;
+    padding: 0 8px 0 0;
+}
+
+.column img{
+    border-radius: 15px;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.column2{
+    flex: 100%;
+    max-width: 100vw;
+    padding: 0 8px 0 0;
+}
+
+.column2 img{
+    border-radius: 15px;
+    margin-top: 15px;
+    vertical-align: middle;
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+         max-width: 50%;
+    }
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+.card a{
+    text-decoration: none;
+}
+
+.category-title{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-size: 1.5vw;
+    text-shadow:0 1px 1px rgba(0,0,0,0.08), 
+    0 2px 2px rgba(0,0,0,0.12), 
+    0 4px 4px rgba(0,0,0,0.16), 
+    0 8px 8px rgba(0,0,0,0.20);
+}
+
+.contact{
+    display: block;
+    position: relative;
+    width: 50vw;
+    /* height: auto; */
+    margin-top: 15vh;
+    background-color: rgba(0, 0, 0, 0.534); 
+    /* backdrop-filter: blur(10px); */
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.contact p{
+    font-size: 1.5vw;
+}
+.about{
+    display: block;
+    position: relative;
+    width: 60vw;
+    /* height: auto; */
+    margin-top: 15vh;
+    background-color: rgba(0, 0, 0, 0.534); 
+    /* backdrop-filter: blur(10px); */
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.about p{
+    font-size: 1.5vw;
+}
+
